@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Fundamentals</h1>
+            <p>Exploring Variables, Functions, Loops, and DOM Manipulation</p>
+        </header>
+
+        <!-- Part 1: Variables and Conditionals -->
+        <section id="variables" class="section">
+            <h2>1. Variables & Conditionals</h2>
+            <div class="example">
+                <h3>Age Checker</h3>
+                <p>Enter your age to check if you're eligible to vote:</p>
+                <input type="number" id="ageInput" placeholder="Enter your age" min="0">
+                <button onclick="checkEligibility()">Check Eligibility</button>
+                <p id="eligibilityResult"></p>
+            </div>
+        </section>
+
+        <!-- Part 2: Functions -->
+        <section id="functions" class="section">
+            <h2>2. Functions</h2>
+            <div class="example">
+                <h3>Calculate Area</h3>
+                <div class="input-group">
+                    <input type="number" id="length" placeholder="Length" min="0">
+                    <input type="number" id="width" placeholder="Width" min="0">
+                    <button onclick="calculateArea()">Calculate Area</button>
+                </div>
+                <p id="areaResult"></p>
+
+                <h3>String Formatter</h3>
+                <input type="text" id="textInput" placeholder="Enter text to format">
+                <div class="button-group">
+                    <button onclick="formatText('uppercase')">UPPERCASE</button>
+                    <button onclick="formatText('lowercase')">lowercase</button>
+                    <button onclick="formatText('capitalize')">Capitalize Words</button>
+                </div>
+                <p id="formattedText"></p>
+            </div>
+        </section>
+
+        <!-- Part 3: Loops -->
+        <section id="loops" class="section">
+            <h2>3. Loops</h2>
+            <div class="example">
+                <h3>Multiplication Table</h3>
+                <input type="number" id="numberInput" placeholder="Enter a number" min="1">
+                <button onclick="generateTable()">Generate Table</button>
+                <div id="multiplicationTable"></div>
+
+                <h3>To-Do List</h3>
+                <div class="todo-container">
+                    <input type="text" id="todoInput" placeholder="Add a new task">
+                    <button onclick="addTodo()">Add Task</button>
+                    <ul id="todoList"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 4: DOM Manipulation -->
+        <section id="dom" class="section">
+            <h2>4. DOM Manipulation</h2>
+            <div class="example">
+                <h3>Theme Switcher</h3>
+                <div class="theme-buttons">
+                    <button onclick="changeTheme('light')">Light</button>
+                    <button onclick="changeTheme('dark')">Dark</button>
+                    <button onclick="changeTheme('blue')">Blue</button>
+                </div>
+
+                <h3>Dynamic List</h3>
+                <div id="dynamicContent">
+                    <button onclick="addItem()">Add Item</button>
+                    <button onclick="removeItem()">Remove Item</button>
+                    <ul id="dynamicList"></ul>
+                </div>
+
+                <h3>Form Validation</h3>
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                        <span id="nameError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        <span id="emailError" class="error"></span>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
